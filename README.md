@@ -96,7 +96,7 @@ AccessToken at = ta.getAccessToken();
 You can visit [Twiiter4J library](http://twitter4j.org/en/) website to know how to use the **Twitter object** to post a tweet, get the user timeline ... etc
 
 
-###Don't Like it?
+###What's Next
 --------------------
 
-If you dont like the interface of this library, you can always use [ppierson/T4JTwitterLogin library](https://github.com/ppierson/T4JTwitterLogin) witch this library was inspired from. Just dont forget to update the Twitter4J library there because it's too old.
+As you noticed, this library still needs a lot of work to be done. How about helping us?
