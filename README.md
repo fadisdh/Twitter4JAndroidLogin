@@ -8,23 +8,87 @@ This library is using the famus [Twiiter4J library](http://twitter4j.org/en/) an
 This library allows you to retrive the Twitter object of Twitter4J after the authentication witch let you do all sort of things with the Twitter API.
 
 
-##How To Use
+##How To Login
+
+First, you need to add the following activity to your **AndroidManifest.xml**
+
+```xml
+<activity
+		android:name="com.fadisdh.android.twitter4jlogin.TwitterLoginActivity"
+		android:theme="@style/Twitter4jLoginTheme.NoTitleBar">
+		<intent-filter>
+    		<action android:name="android.intent.action.VIEW" />
+    		<category android:name="android.intent.category.DEFAULT" />
+    		<category android:name="android.intent.category.BROWSABLE" />
+    		<data android:scheme="x-oauthflow-twitter" android:host="twitterlogin"/>
+		</intent-filter>
+</activity>
+```
+
+Next, Put this is your **onCreate()** method of the activity your trying to connect from
 
 ```java
-TwitterAdapter ta = TwitterAdapter.getInstance(this, <your app key>, <your app secret>);
-ta.setCallback(callback);
-ta.connect();
 
-TwiiterAdapter.Callback callback = new TwiiterAdapter.Callback{
+TwitterAdapter ta = TwitterAdapter.getInstance();
+
+TwitterAdapter.Callback callback = new TwitterAdapter.Callback{
+ 
   @override
   public void success(int type){
-    //do stuff here 
+    //woohooo, you are in. Do stuff here 
   }
   
   @override
   public void failed(int type, Exception e){
-    //do stuff here
+    //the authentication failed. Do stuff here
+  }
+}
+```
+
+Next, Add this to your **onActivityResult()** method of the activity you are trying to connect from
+
+```java
+@Override
+public void onActivityResult(int requestCode, int resultCode, Intent data) {
+  super.onActivityResult(requestCode, resultCode, data);
+  TwitterAdapter.getInstance().onActivityResult(requestCode, resultCode, data);
+}
+```
+
+You can connect to twitter using the follwong line
+```java
+  ta.connect();
+```
+
+or this, if you don't want to use the global callback you've just initiated
+```java
+  ta.connect(callback);
+```
+
+## How to retrieve user data
+
+to retrieve user data use the following code inside the **success()** method of the login callback
+```java
+TwitterAdapter.UserCallback userCallback = new TwitterAdapter.UserCallback{
+  
+  @override
+  public void success(Twitter4J.User user){
+    //use the user object to retrieve the user data
+  }
+  
+  @override
+  public void failed(Exception e){
+    //failed, do stuff
   }
 }
 
+ta.getUser(userCallback);
+```
+
+## Get The Twitter Object and The AccessToken of Twitter4J library
+
+to get the **Twitter** object or the **AccessToken** object use the following code inside the **success()** method of the login callback
+```java
+Twitter t = ta.getTwitterInstance();
+AccessToken at = ta.getAccessToken();
 ```
