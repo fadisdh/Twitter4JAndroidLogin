@@ -8,8 +8,7 @@ This library is using the famous [Twiiter4J library](http://twitter4j.org/en/), 
 This library allows you to retrive the Twitter object of Twitter4J after the authentication witch let you do all sort of things with the Twitter API.
 
 
-###How To Login
-=====================
+###How To Login=====================
 
 First, you need to add the following activity to your **AndroidManifest.xml**
 ```xml
