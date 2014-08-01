@@ -44,7 +44,7 @@ TwitterAdapter.Callback callback = new TwitterAdapter.Callback{
 }
 ```
 
-Next, Add this to your **onActivityResult()** method of the activity you are trying to connect from
+And this to your **onActivityResult()** method
 ```java
 @Override
 public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -55,12 +55,12 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 You can connect to twitter using the follwong line
 ```java
-  ta.connect();
+ta.connect();
 ```
 
 or this, if you don't want to use the global callback you've just initiated
 ```java
-  ta.connect(callback);
+ta.connect(callback);
 ```
 
 
