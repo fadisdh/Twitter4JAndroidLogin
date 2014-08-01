@@ -1,9 +1,9 @@
 Twitter4JAndroidLogin
 =====================
 
-Until Twitter decides to realease an offical SDK fro Android, you can use this simple android library for logging into twitter and retrieving the user information.
+Until Twitter decides to realease an offical SDK for Android, you can use this simple android library for logging into twitter and retrieving the user information.
 
-This library is using the famous [Twiiter4J library](http://twitter4j.org/en/), and inspired by [ppierson/T4JTwitterLogin library](https://github.com/ppierson/T4JTwitterLogin); so thank you [ppierson](https://github.com/ppierson)
+This library is using the famous [Twiiter4J library](http://twitter4j.org/en/), and inspired by [ppierson/T4JTwitterLogin library](https://github.com/ppierson/T4JTwitterLogin); many thanks to [ppierson](https://github.com/ppierson)
 
 This library allows you to retrive the **Twitter** object of Twitter4J after the authentication witch let you do all sort of things with the Twitter API.
 
@@ -25,7 +25,7 @@ First of all, you need to register the following activity in your **AndroidManif
 </activity>
 ```
 
-Next, put this is your **onActivityResult()** method of the activity your trying to connect from
+Next, put this in your **onActivityResult()** method of the activity you are trying to connect from
 ```java
 @Override
 public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -34,7 +34,7 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 }
 ```
 
-Finally, register your callback on the **onCreate()** method in the same activity. This callback will be called once you logged in. so all your twiiter realted code should be in the **success()** method of the callback.
+Finally, register your callback in the **onCreate()** method from the same activity. This callback will be called once you logged in. so all your twitter related code should be in the **success()** method of this callback.
 Don't forget to change *{Your App Key}* and your *{Your App Secret}* to your actual twitter app key and secret.
 ```java
 
@@ -53,7 +53,7 @@ TwitterAdapter.Callback callback = new TwitterAdapter.Callback(){
 };
 ```
 
-You can connect to twitter using the following line
+You can connect to twitter using **connect()** or **connect(callback)**
 ```java
 ta.connect();
 ```
@@ -62,7 +62,7 @@ ta.connect();
 ###How to Retrieve The User Data
 --------------------
 
-to retrieve user data use the following code inside the **success()** method of the login callback
+To retrieve user data use the following code. Remember, this code should be called from inside the **success()** method of the login callback
 ```java
 ta.getUser(new TwitterAdapter.UserCallback(){
   
@@ -82,7 +82,7 @@ ta.getUser(new TwitterAdapter.UserCallback(){
 ###Get The Twitter Object and The AccessToken of twitter4j library
 --------------------
 
-to get the **Twitter** object or the **AccessToken** object use the following code inside the **success()** method of the login callback
+To get the **Twitter** object or the **AccessToken** object use the following code inside the **success()** method of the login callback
 ```java
 Twitter t = ta.getTwitterInstance();
 AccessToken at = ta.getAccessToken();
