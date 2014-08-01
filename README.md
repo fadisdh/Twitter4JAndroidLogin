@@ -94,3 +94,7 @@ You can visit [Twiiter4J library](http://twitter4j.org/en/) website to know how 
 --------------------
 
 As you noticed, this library still needs a lot of work to be done. How about helping us?
+
+###License
+--------------------
+This project is under [The MIT License](https://github.com/fadisdh/Twitter4JAndroidLogin/blob/master/LICENSE)
