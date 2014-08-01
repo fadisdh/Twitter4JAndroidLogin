@@ -8,10 +8,9 @@ This library is using the famus [Twiiter4J library](http://twitter4j.org/en/) an
 This library allows you to retrive the Twitter object of Twitter4J after the authentication witch let you do all sort of things with the Twitter API.
 
 
-##How To Login
+###How To Login
 
 First, you need to add the following activity to your **AndroidManifest.xml**
-
 ```xml
 <activity
 		android:name="com.fadisdh.android.twitter4jlogin.TwitterLoginActivity"
@@ -26,7 +25,6 @@ First, you need to add the following activity to your **AndroidManifest.xml**
 ```
 
 Next, Put this is your **onCreate()** method of the activity your trying to connect from
-
 ```java
 
 TwitterAdapter ta = TwitterAdapter.getInstance();
@@ -46,7 +44,6 @@ TwitterAdapter.Callback callback = new TwitterAdapter.Callback{
 ```
 
 Next, Add this to your **onActivityResult()** method of the activity you are trying to connect from
-
 ```java
 @Override
 public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -65,7 +62,7 @@ or this, if you don't want to use the global callback you've just initiated
   ta.connect(callback);
 ```
 
-## How to retrieve user data
+###How to retrieve user data
 
 to retrieve user data use the following code inside the **success()** method of the login callback
 ```java
@@ -85,7 +82,7 @@ TwitterAdapter.UserCallback userCallback = new TwitterAdapter.UserCallback{
 ta.getUser(userCallback);
 ```
 
-## Get The Twitter Object and The AccessToken of Twitter4J library
+###Get The Twitter Object and The AccessToken of Twitter4J library
 
 to get the **Twitter** object or the **AccessToken** object use the following code inside the **success()** method of the login callback
 ```java
