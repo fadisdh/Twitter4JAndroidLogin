@@ -1,7 +1,7 @@
 Twitter4JAndroidLogin
 =====================
 
-Until Twitter decides to realease its offical SDK fro Android, you can use this simple android library for logging into twitter and retrieving the user information.
+Until Twitter decides to realease an offical SDK fro Android, you can use this simple android library for logging into twitter and retrieving the user information.
 
 This library is using the famous [Twiiter4J library](http://twitter4j.org/en/), and inspired by [ppierson/T4JTwitterLogin library](https://github.com/ppierson/T4JTwitterLogin); so thank you [ppierson](https://github.com/ppierson)
 
