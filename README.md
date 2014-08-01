@@ -35,10 +35,10 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 ```
 
 Finally, regiter your callback on the **onCreate()** method in the same activity. This callback will be called once you logged in. so all your twiiter realted code should be in the **success()** method of the callback.
-**Don't forget to change <Your App Key> and your <Your App Secret> to your actual twiiter app key and secret.**
+Don't forget to change *{Your App Key}* and your *{Your App Secret}* to your actual twitter app key and secret.
 ```java
 
-TwitterAdapter ta = TwitterAdapter.getInstance(this, <Your App Key>, <Your App Secret>);
+TwitterAdapter ta = TwitterAdapter.getInstance(this, "{Your App Key}", "{Your App Secret}");
 TwitterAdapter.Callback callback = new TwitterAdapter.Callback(){
  
   @Override
