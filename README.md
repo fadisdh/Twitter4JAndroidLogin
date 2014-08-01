@@ -52,7 +52,7 @@ TwitterAdapter.Callback callback = new TwitterAdapter.Callback(){
 };
 ```
 
-You can connect to twitter using the follwong line
+You can connect to twitter using the following line
 ```java
 ta.connect();
 ```
