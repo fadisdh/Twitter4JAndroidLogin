@@ -63,8 +63,9 @@ or this, if you don't want to use the global callback you've just initiated
   ta.connect(callback);
 ```
 
+
 ###How to retrieve user data
-=====================
+--------------------
 
 to retrieve user data use the following code inside the **success()** method of the login callback
 ```java
@@ -86,7 +87,7 @@ ta.getUser(userCallback);
 
 
 ###Get The Twitter Object and The AccessToken of Twitter4J library
-=====================
+--------------------
 
 to get the **Twitter** object or the **AccessToken** object use the following code inside the **success()** method of the login callback
 ```java
@@ -97,5 +98,6 @@ You can visit [Twiiter4J library](http://twitter4j.org/en/) website to know how 
 
 
 ###Don't Like it?
-=====================
+--------------------
+
 If you dont like the interface of this library, you can always use [ppierson/T4JTwitterLogin library](https://github.com/ppierson/T4JTwitterLogin) witch this library was inspired from. Just dont forget to update the Twitter4J library there because it's too old.
