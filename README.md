@@ -58,18 +58,13 @@ You can connect to twitter using the following line
 ta.connect();
 ```
 
-or this, if you don't want to use the global callback you've just initiated
-```java
-ta.connect(callback);
-```
 
-
-###How to retrieve user data
+###How to Retrieve The User Data
 --------------------
 
 to retrieve user data use the following code inside the **success()** method of the login callback
 ```java
-TwitterAdapter.UserCallback userCallback = new TwitterAdapter.UserCallback(){
+ta.getUser(new TwitterAdapter.UserCallback(){
   
   @Override
   public void success(twitter4j.User user){
@@ -80,13 +75,11 @@ TwitterAdapter.UserCallback userCallback = new TwitterAdapter.UserCallback(){
   public void failed(Exception e){
     //failed, do stuff
   }
-};
-
-ta.getUser(userCallback);
+});
 ```
 
 
-###Get The Twitter Object and The AccessToken of Twitter4J library
+###Get The Twitter Object and The AccessToken of twitter4j library
 --------------------
 
 to get the **Twitter** object or the **AccessToken** object use the following code inside the **success()** method of the login callback
