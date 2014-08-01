@@ -10,8 +10,8 @@ This library allows you to retrive the Twitter object of Twitter4J after the aut
 
 ##How To Use
 
-'''
+```java
 TwitterAdapter ta = TwitterAdapter.getInstance();
 ta.setCallback(callback);
 ta.connect();
-'''
+```
