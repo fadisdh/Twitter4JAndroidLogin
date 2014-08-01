@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014 Fadi Saadeh (fadisdh)
+
+     Licensed under the MIT License.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.fadisdh.android.twitter4jlogin">
+    <uses-sdk android:minSdkVersion="8"/>
+    <application/>
+</manifest>
