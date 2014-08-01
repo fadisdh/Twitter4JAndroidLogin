@@ -11,7 +11,20 @@ This library allows you to retrive the Twitter object of Twitter4J after the aut
 ##How To Use
 
 ```java
-TwitterAdapter ta = TwitterAdapter.getInstance();
+TwitterAdapter ta = TwitterAdapter.getInstance(this, appKey, appSecret);
 ta.setCallback(callback);
 ta.connect();
+
+TwiiterAdapter.Callback callback = new TwiiterAdapter.Callback{
+  @override
+  public void success(int type){
+    //do stuff here 
+  }
+  
+  @override
+  public void failed(int type, Exception e){
+    //do stuff here
+  }
+}
+
 ```
